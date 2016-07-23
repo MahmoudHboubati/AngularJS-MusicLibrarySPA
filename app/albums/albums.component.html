@@ -1,0 +1,10 @@
+<h1>Albums</h1>
+<div *ngIf="isLoading">
+    <i class="fa fa-spinner fa-spin fa-x3"></i>
+</div>
+<ul>
+    <li *ngFor="#album of albums">
+        <a [routerLink="['Album', { id: album.id }]" ]>
+          {{album.title}}</a>
+    </li>
+</ul>
